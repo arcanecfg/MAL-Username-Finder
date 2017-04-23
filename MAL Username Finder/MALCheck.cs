@@ -67,16 +67,16 @@ namespace MAL_Username_Finder
                 case true:
                     {
                         Console.ForegroundColor = ConsoleColor.Green;
-                        Console.WriteLine(String.Format("[{0}/{1}] Available username -- {2}",
-                            count.ToString(),totalCount.ToString(),username.ToString()));
+                        Console.WriteLine("[{0}/{1}] Available username -- {2}",
+                            count.ToString(),totalCount.ToString(),username.ToString());
                         availableList.Add(username.ToString());
                         break;
                     }
                 case false:
                     {
                         Console.ForegroundColor = ConsoleColor.DarkGray;
-                        Console.WriteLine(String.Format("[{0}/{1}] Unavailable username -- {2}",
-                            count.ToString(),totalCount.ToString(),username.ToString()));
+                        Console.WriteLine("[{0}/{1}] Unavailable username -- {2}",
+                            count.ToString(),totalCount.ToString(),username.ToString());
                         unavailableList.Add(username.ToString());
                         break;
                     }
@@ -85,8 +85,8 @@ namespace MAL_Username_Finder
             if (count >= totalCount)
             {
                 Console.ForegroundColor = ConsoleColor.White;
-                Console.WriteLine(String.Format("{0}Done checking.{1}Found {2} available usernames.",
-                        Environment.NewLine, Environment.NewLine, availableList.Count()));
+                Console.WriteLine("{0}Done checking.{1}Found {2} available usernames.",
+                        Environment.NewLine, Environment.NewLine, availableList.Count());
                 MainProgram.OutputUsernames();
             }
         }
